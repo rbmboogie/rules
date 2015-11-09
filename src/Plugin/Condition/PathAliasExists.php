@@ -78,15 +78,15 @@ class PathAliasExists extends RulesConditionBase implements ContainerFactoryPlug
    *
    * @param string $alias
    *   The alias to see if exists.
-   * @param mixed $language
+   * @param \Drupal\Core\Language\LanguageInterface|null $language
    *   The language to use.
    *
    * @return bool
    *   TRUE if the system path does not match the given alias (ie: the alias
    *   exists).
    */
-  public function doEvaluate($alias, LanguageInterface $language = NULL) {
-    $language = !is_null($language) ? $language->getId() : NULL;
+  protected function doEvaluate($alias, LanguageInterface $language = NULL) {
+    $language = is_null($language) ? NULL : $language->getId();
     $path = $this->aliasManager->getPathByAlias($alias, $language);
     return $path != $alias;
   }
