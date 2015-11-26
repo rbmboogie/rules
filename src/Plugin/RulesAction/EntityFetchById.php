@@ -23,7 +23,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *     "type" = @ContextDefinition("string",
  *       label = @Translation("Entity type"),
  *       description = @Translation("Specifies the type of the entity that should be fetched."),
- *        assignment_restriction = "input"
+ *       assignment_restriction = "input"
  *     ),
  *     "entity_id" = @ContextDefinition("integer",
  *       label = @Translation("Identifier"),
@@ -31,9 +31,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *     )
  *   },
  *   provides = {
- *      "entity_fetched" = @ContextDefinition("entity",
- *        label = @Translation("Fetched entity")
- *      )
+ *     "entity_fetched" = @ContextDefinition("entity",
+ *       label = @Translation("Fetched entity")
+ *     )
  *   }
  * )
  *
