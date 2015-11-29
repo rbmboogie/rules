@@ -35,7 +35,7 @@ class DataListItemRemove extends RulesActionBase {
   /**
    * {@inheritdoc}
    */
-  protected function doExecute() {
+  protected function doExecute($list, $item) {
     $list = $this->getContextValue('list');
     $item = $this->getContextValue('item');
 
