@@ -56,7 +56,7 @@ class EntityFetchByIdTest extends RulesEntityIntegrationTestBase {
     $entityStorage = $this->prophesize(EntityStorageInterface::class);
     $entityStorage->load(1)->willReturn($entity->reveal())
       ->shouldBeCalledTimes(1);
-    $this->entityManager->getStorage($entity_type)
+    $this->entityTypeManager->getStorage($entity_type)
       ->willReturn($entityStorage->reveal())
       ->shouldBeCalledTimes(1);
 
