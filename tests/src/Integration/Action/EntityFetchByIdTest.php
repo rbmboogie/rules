@@ -9,7 +9,6 @@ namespace Drupal\Tests\rules\Integration\Action;
 
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityStorageInterface;
-use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Tests\rules\Integration\RulesEntityIntegrationTestBase;
 
 /**
